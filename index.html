@@ -1,0 +1,104 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Leche de Cabra — Fresca, 100% natural</title>
+  <meta name="description" content="Leche de cabra fresca, natural y pasteurizada. Pedidos al +51 973 133 799 o dmogrovejo@gmail.com" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">Leche de Cabra</div>
+      <nav class="top-nav">
+        <a href="tel:+51973133799" class="phone">📞 +51 973 133 799</a>
+        <button id="orderBtn" class="btn primary">Pedir ahora</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Cabras en el campo y botella de leche de cabra" class="hero-img">
+      <div class="hero-copy">
+        <h1>LECHE DE CABRA</h1>
+        <p class="subtitle">Fresca, 100% natural y de alta calidad</p>
+        <p class="price">S/ 15.00 por litro</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="tel:+51973133799">Llamar ahora</a>
+          <button class="btn" id="whatsappBtn">Pedir por WhatsApp</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="features wrap">
+      <h2>Beneficios de la leche de cabra</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Nutritiva</h3>
+          <p>Rica en proteínas, calcio y vitaminas — ideal para toda la familia.</p>
+        </div>
+        <div class="card">
+          <h3>Fácil de digerir</h3>
+          <p>Grasas de cadena más corta y glóbulos más pequeños que facilitan la digestión.</p>
+        </div>
+        <div class="card">
+          <h3>Cadena fría</h3>
+          <p>Envasado y refrigeración para mantener calidad y seguridad.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="products wrap" id="productos">
+      <h2>Productos</h2>
+      <div class="product-list">
+        <article class="product-card">
+          <img src="images/product-1l.jpg" alt="Botella 1L Leche de cabra">
+          <div class="product-info">
+            <h3>Leche de Cabra — 1 L</h3>
+            <p class="price">S/ 15.00</p>
+            <p>Leche pasteurizada, envasada en botella de vidrio. Entrega local.</p>
+            <div class="product-actions">
+              <a class="btn primary" href="tel:+51973133799">Pedir</a>
+              <button class="btn" onclick="openOrderModal('Leche 1L')">Ordenar online</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact wrap">
+      <h2>Contacto</h2>
+      <p>Pedidos: <a href="tel:+51973133799">+51 973 133 799</a></p>
+      <p>Consultas: <a href="mailto:dmogrovejo@gmail.com">dmogrovejo@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>© Leche de Cabra — Venta local</div>
+      <div id="visitor-counter">Visitas: <span id="count">...</span></div>
+    </div>
+  </footer>
+
+  <!-- Order modal -->
+  <div id="orderModal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" onclick="closeOrderModal()">✕</button>
+      <h3>Realizar pedido</h3>
+      <form id="orderForm" onsubmit="submitOrder(event)">
+        <label>Nombre<br><input name="name" required></label>
+        <label>Teléfono<br><input name="phone" required></label>
+        <label>Producto y cantidad<br><input name="product" id="productField" required></label>
+        <label>Zona de entrega<br><input name="zone" required></label>
+        <button class="btn primary" type="submit">Enviar pedido</button>
+      </form>
+      <p class="note">O llama al <a href="tel:+51973133799">+51 973 133 799</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
